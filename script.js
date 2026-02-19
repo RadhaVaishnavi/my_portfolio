@@ -10,6 +10,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Project Carousel
 const projectSwiper = new Swiper('.project-swiper', {
     loop: true,
+    autoHeight: true,
+    spaceBetween: 20,
     pagination: { el: '.swiper-pagination', clickable: true },
     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
     breakpoints: { 640: { slidesPerView: 1 }, 1024: { slidesPerView: 2 } }
@@ -18,15 +20,11 @@ const projectSwiper = new Swiper('.project-swiper', {
 // Internship Carousel
 const internshipSwiper = new Swiper('.internship-swiper', {
     loop: true,
+    autoHeight: true,
+    spaceBetween: 20,
     pagination: { el: '.swiper-pagination', clickable: true },
     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
     breakpoints: { 640: { slidesPerView: 1 }, 1024: { slidesPerView: 2 } }
 });
 
-// Cert Carousel
-const certSwiper = new Swiper('.cert-swiper', {
-    loop: true,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-    breakpoints: { 640: { slidesPerView: 1 }, 1024: { slidesPerView: 3 } }
-});
+// No cert swiper anymore
