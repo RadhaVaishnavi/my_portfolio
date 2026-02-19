@@ -1,4 +1,3 @@
-/* Reset & Base (mobile-first) */
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +5,13 @@
 }
 
 body {
-    margin: 0;
     font-family: 'Roboto', sans-serif;
     color: #fff;
     background: url('https://thumbs.dreamstime.com/b/abstract-digital-neural-network-visualization-generative-ai-high-quality-photo-image-features-representation-320500434.jpg') no-repeat center center fixed;
     background-size: cover;
     line-height: 1.6;
     position: relative;
-    font-size: 16px; /* Base font */
+    font-size: 16px;
 }
 
 body::before {
@@ -21,7 +19,7 @@ body::before {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.65); /* Darker overlay for mobile readability */
+    background: rgba(0, 0, 0, 0.65);
     z-index: -1;
 }
 
@@ -44,7 +42,7 @@ nav {
 }
 
 .name {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 700;
 }
 
@@ -60,34 +58,32 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
 }
 
-nav a:hover { color: #e0e0e0; }
+nav a:hover { color: #ddd; }
 
 section {
+    background: transparent;
+    padding: 2rem 1rem;
+    margin: 2rem auto;
     max-width: 1100px;
-    margin: 1.5rem auto;
-    padding: 1.5rem 1rem;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
 }
 
 #hero {
     text-align: center;
-    padding: 3rem 1rem 4rem;
+    padding: 5rem 1rem 6rem;
 }
 
 #hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 1.2rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 #hero p {
-    font-size: 1.05rem;
-    max-width: 90%;
-    margin: 0 auto 1.5rem;
-    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 .btn {
@@ -98,7 +94,7 @@ section {
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
-    transition: transform 0.2s, opacity 0.2s;
+    transition: all 0.2s;
 }
 
 .btn:hover {
@@ -107,130 +103,128 @@ section {
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     border-bottom: 3px solid #6A1B9A;
     padding-bottom: 0.6rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
-/* Skills - uniform on all screens */
 .skills-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: 1rem;
     justify-content: center;
 }
 
 .skills-flex span {
-    flex: 1 1 45%; /* 2 columns on very small */
-    min-width: 140px;
+    flex: 1 1 160px;
+    min-height: 55px;
     background: rgba(0, 123, 255, 0.25);
-    padding: 0.8rem 0.5rem;
+    padding: 0.9rem;
     border-radius: 8px;
     text-align: center;
-    font-size: 0.95rem;
-    min-height: 50px;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Swiper base */
+/* Swiper */
 .swiper {
     width: 100%;
     padding: 0.5rem;
 }
 
 .swiper-slide {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    padding: 1.2rem;
-    color: #fff;
-    min-height: 320px;
+    min-height: 420px !important;
+    padding: 1.8rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
 }
 
+.swiper-slide h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.swiper-slide p,
+.swiper-slide ul {
+    margin: 1rem 0;
+    flex-grow: 1;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.swiper-slide .btn {
+    margin-top: auto;
+    align-self: center;
+    width: 80%;
+    max-width: 220px;
+}
+
 .swiper-pagination-bullet { background: #fff; opacity: 0.7; }
 .swiper-pagination-bullet-active { background: #6A1B9A; }
 .swiper-button-next, .swiper-button-prev { color: #fff; }
 
-/* Certifications grid - 1 col mobile */
+/* Certifications */
 .cert-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.2rem;
+    gap: 1.5rem;
 }
 
 .cert-card {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 1.2rem;
-    border-radius: 10px;
-    min-height: 160px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
 }
 
-.cert-card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
-.cert-card p { font-size: 0.9rem; margin: 0.3rem 0; }
+.cert-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; }
+.cert-card p { font-size: 0.95rem; margin: 0.4rem 0; }
+
+/* Contact */
+#contact .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+#contact .buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 1.5rem;
+    padding: 2rem;
     background: linear-gradient(to right, #007BFF, #6A1B9A);
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
-/* ────────────────────────────────────── */
-/* TABLET & UP (min-width) - enhance layout */
-@media (min-width: 480px) {
-    .skills-flex span { flex: 1 1 30%; } /* 3-ish columns */
-    #hero h1 { font-size: 2.6rem; }
-}
-
+/* Responsive */
 @media (min-width: 768px) {
-    nav {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-    }
-    nav ul { gap: 2rem; }
-    .name { font-size: 1.6rem; }
-
-    section { padding: 2rem; margin: 2.5rem auto; }
-
-    #hero { padding: 6rem 2rem; }
-    #hero h1 { font-size: 3.2rem; }
-    #hero p { font-size: 1.15rem; max-width: 800px; }
-
-    .skills-flex span {
-        flex: 0 1 180px;
-        font-size: 1rem;
-    }
-
-    .swiper-slide { min-height: 360px; padding: 1.8rem; }
-
-    .cert-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    nav { flex-direction: row; justify-content: space-between; padding: 1.2rem 3rem; }
+    #hero h1 { font-size: 4rem; }
+    .skills-flex span { flex: 0 1 180px; }
+    .cert-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (min-width: 1024px) {
-    section { max-width: 1200px; }
-
-    .skills-flex span { flex: 0 1 160px; }
-
-    .swiper-slide { min-height: 400px; }
-
-    .cert-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .project-slide, .internship-slide { font-size: 1.05rem; }
+    section { padding: 3rem 2rem; max-width: 1300px; }
+    .cert-grid { grid-template-columns: repeat(3, 1fr); }
+    .swiper-slide { min-height: 450px !important; }
 }
