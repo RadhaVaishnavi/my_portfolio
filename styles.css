@@ -10,13 +10,13 @@ body {
     font-size: 16px;
 }
 
-h1, h2, h3 { font-family: 'Manrope', sans-serif; font-weight: 700; }
+h1, h2, h3 { font-family: 'Manrope', sans-serif; font-weight: 700; letter-spacing: -0.5px; }
 
 body::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.68);
     z-index: -1;
 }
 
@@ -25,7 +25,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 nav {
@@ -38,78 +38,82 @@ nav {
     gap: 1rem;
 }
 
-.name { font-size: 1.8rem; }
+.name { font-size: 1.9rem; }
 
 nav ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
 
-nav a { color: #fff; text-decoration: none; font-weight: 500; }
+nav a { color: #fff; text-decoration: none; font-weight: 500; font-size: 1.05rem; }
 nav a:hover { color: #e0e0e0; }
 
-section { background: transparent; padding: 3rem 1rem; margin: 2rem auto; max-width: 1100px; }
+section { background: transparent; padding: 3.5rem 1rem; margin: 2.5rem auto; max-width: 1100px; }
 
-#hero { text-align: center; padding: 6rem 1rem 7rem; }
-#hero h1 { font-size: 3.5rem; margin-bottom: 1.8rem; }
-#hero p { max-width: 900px; margin: 0 auto 2.5rem; font-size: 1.15rem; line-height: 1.8; }
+#hero { text-align: center; padding: 7rem 1rem 8rem; }
+#hero h1 { font-size: 3.8rem; margin-bottom: 2rem; }
+#hero p { max-width: 920px; margin: 0 auto 2.5rem; font-size: 1.18rem; line-height: 1.9; }
 
 .btn {
     display: inline-block;
     background: linear-gradient(to right, #007BFF, #6A1B9A);
     color: #fff;
-    padding: 0.8rem 1.6rem;
+    padding: 0.9rem 1.8rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.25s;
-    font-size: 1rem;
-    min-width: 180px;
+    font-size: 1.05rem;
+    min-width: 200px;
     text-align: center;
 }
 
-.btn:hover { transform: translateY(-3px); opacity: 0.92; }
+.btn:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,123,255,0.4); }
 
-h2 { font-size: 2.2rem; border-bottom: 3px solid #6A1B9A; padding-bottom: 0.8rem; margin-bottom: 2rem; text-align: center; }
+h2 { font-size: 2.4rem; border-bottom: 4px solid #6A1B9A; padding-bottom: 0.8rem; margin-bottom: 2rem; text-align: center; }
 
 .education-box {
     background: rgba(255,255,255,0.12);
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 800px;
+    padding: 2.2rem;
+    border-radius: 14px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
-.education-box h3 { margin-bottom: 1.2rem; }
+.education-box ul { list-style: none; }
+.education-box li { margin: 1.2rem 0; font-size: 1.1rem; }
 
 .skills-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.2rem;
     justify-content: center;
 }
 
 .skills-flex span {
-    flex: 0 0 200px; /* fixed width */
-    height: 60px;    /* fixed height */
-    background: rgba(0,123,255,0.28);
-    border-radius: 10px;
+    flex: 0 0 220px;
+    height: 70px;
+    background: rgba(0,123,255,0.3);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
-    padding: 0 0.8rem;
+    font-size: 1.05rem;
+    padding: 0 1rem;
     text-align: center;
+    font-weight: 500;
 }
 
-/* Swiper slides */
+/* Swiper */
+.swiper { width: 100%; padding: 1rem 0; }
+
 .swiper-slide {
-    min-height: 480px !important;
-    padding: 2.2rem;
-    border-radius: 14px;
+    min-height: 500px !important;
+    padding: 2.5rem;
+    border-radius: 16px;
     background: rgba(255,255,255,0.12);
     display: flex;
     flex-direction: column;
@@ -123,17 +127,16 @@ h2 { font-size: 2.2rem; border-bottom: 3px solid #6A1B9A; padding-bottom: 0.8rem
     flex-direction: column;
 }
 
-.swiper-slide h3 { margin-bottom: 1.2rem; font-size: 1.5rem; }
+.swiper-slide h3 { margin-bottom: 1.4rem; font-size: 1.6rem; }
 
 .swiper-slide p,
-.swiper-slide ul { margin: 1.2rem 0; flex-grow: 1; text-align: left; font-size: 1.05rem; }
+.swiper-slide ul { margin: 1.4rem 0; flex-grow: 1; text-align: left; font-size: 1.08rem; }
 
-.project-btn,
-.internship-slide .btn {
+.project-btn {
     margin-top: auto;
     align-self: center;
-    width: 75%;
-    max-width: 240px;
+    width: 80%;
+    max-width: 260px;
 }
 
 /* Contact */
@@ -141,40 +144,40 @@ h2 { font-size: 2.2rem; border-bottom: 3px solid #6A1B9A; padding-bottom: 0.8rem
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
 
-/* Certifications grid */
+/* Certifications */
 .cert-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.8rem;
+    gap: 2rem;
 }
 
 .cert-card {
     background: rgba(255,255,255,0.12);
-    padding: 1.8rem;
-    border-radius: 12px;
+    padding: 2rem;
+    border-radius: 14px;
     text-align: center;
-    min-height: 200px;
+    min-height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 /* Footer */
-footer { text-align: center; padding: 2.5rem; background: linear-gradient(to right, #007BFF, #6A1B9A); margin-top: 4rem; }
+footer { text-align: center; padding: 3rem; background: linear-gradient(to right, #007BFF, #6A1B9A); margin-top: 4rem; }
 
 /* Responsive */
 @media (min-width: 768px) {
-    nav { flex-direction: row; justify-content: space-between; padding: 1.5rem 4rem; }
-    #hero h1 { font-size: 4.5rem; }
-    .skills-flex span { flex: 0 0 220px; height: 65px; font-size: 1.05rem; }
+    nav { flex-direction: row; justify-content: space-between; padding: 1.5rem 5rem; }
+    #hero h1 { font-size: 5rem; }
+    .skills-flex span { flex: 0 0 240px; height: 75px; font-size: 1.1rem; }
     .cert-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (min-width: 1024px) {
-    section { padding: 4rem 2rem; max-width: 1300px; }
+    section { padding: 4.5rem 3rem; max-width: 1400px; }
     .cert-grid { grid-template-columns: repeat(3, 1fr); }
-    .swiper-slide { min-height: 500px !important; }
+    .swiper-slide { min-height: 520px !important; }
 }
