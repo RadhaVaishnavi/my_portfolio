@@ -144,7 +144,7 @@ h2 { font-size: 2.4rem; border-bottom: 4px solid #6A1B9A; padding-bottom: 0.8rem
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2.5rem; /* ← bigger gap, looks less compacted */
+    gap: 5.5rem; /* ← bigger gap, looks less compacted */
     margin-top: 1.5rem;
 }
 
