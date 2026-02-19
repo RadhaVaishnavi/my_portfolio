@@ -139,12 +139,19 @@ h2 { font-size: 2.4rem; border-bottom: 4px solid #6A1B9A; padding-bottom: 0.8rem
     max-width: 260px;
 }
 
-/* Contact */
+/* Contact - increased spacing & same size */
 #contact .contact-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.8rem;
+    gap: 2.5rem; /* ← bigger gap, looks less compacted */
+    margin-top: 1.5rem;
+}
+
+#contact .btn {
+    min-width: 220px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
 }
 
 /* Certifications */
@@ -174,6 +181,7 @@ footer { text-align: center; padding: 3rem; background: linear-gradient(to right
     #hero h1 { font-size: 5rem; }
     .skills-flex span { flex: 0 0 240px; height: 75px; font-size: 1.1rem; }
     .cert-grid { grid-template-columns: repeat(2, 1fr); }
+    #contact .contact-content { gap: 3rem; } /* even more space on desktop */
 }
 
 @media (min-width: 1024px) {
