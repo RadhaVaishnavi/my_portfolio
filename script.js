@@ -5,31 +5,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Projects - more responsive
 new Swiper('.project-swiper', {
     loop: true,
-    spaceBetween: 20,
+    spaceBetween: 25,
     autoHeight: true,
     pagination: { el: '.swiper-pagination', clickable: true },
     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
     breakpoints: {
         480:  { slidesPerView: 1 },
-        768:  { slidesPerView: 2, spaceBetween: 30 },
-        1024: { slidesPerView: 2, spaceBetween: 40 }
+        768:  { slidesPerView: 2, spaceBetween: 35 },
+        1024: { slidesPerView: 2, spaceBetween: 45 }
     }
 });
 
-// Internships - autoplay + responsive
 new Swiper('.internship-swiper', {
     loop: true,
-    spaceBetween: 20,
+    spaceBetween: 25,
     autoHeight: true,
     autoplay: { delay: 5000, disableOnInteraction: false },
     pagination: { el: '.swiper-pagination', clickable: true },
     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
     breakpoints: {
         480:  { slidesPerView: 1 },
-        768:  { slidesPerView: 2, spaceBetween: 30 },
-        1024: { slidesPerView: 2, spaceBetween: 40 }
+        768:  { slidesPerView: 2, spaceBetween: 35 },
+        1024: { slidesPerView: 2, spaceBetween: 45 }
     }
 });
