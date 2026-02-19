@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    color: #fff; /* Light text for dark bg */
+    color: #fff;
     background: url('https://thumbs.dreamstime.com/b/abstract-digital-neural-network-visualization-generative-ai-high-quality-photo-image-features-representation-320500434.jpg') no-repeat center center fixed;
     background-size: cover;
     line-height: 1.6;
@@ -14,12 +14,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Overlay for readability */
+    background: rgba(0, 0, 0, 0.6);
     z-index: -1;
 }
 
 header {
-    background: linear-gradient(to right, #007BFF, #6A1B9A); /* Blue-purple gradient */
+    background: linear-gradient(to right, #007BFF, #6A1B9A);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
@@ -61,7 +61,7 @@ section {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent for vibe */
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
 
@@ -98,22 +98,28 @@ h2 {
     color: #fff;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+.skills-flex {
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
 }
 
-.skills-grid span {
+.skills-flex span {
+    flex: 1 1 150px;
     background: rgba(0, 123, 255, 0.2);
     padding: 0.5rem;
     border-radius: 5px;
     text-align: center;
     transition: transform 0.3s;
     color: #fff;
+    min-height: 40px; /* Uniform height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.skills-grid span:hover {
+.skills-flex span:hover {
     transform: scale(1.05);
 }
 
@@ -129,13 +135,15 @@ h2 {
     border-radius: 5px;
     text-align: center;
     color: #fff;
-}
-
-.project-slide, .internship-slide, .cert-slide {
+    min-height: 300px; /* Uniform height */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.project-slide, .internship-slide {
+    /* No cert-slide anymore */
 }
 
 .swiper-pagination-bullet {
@@ -143,6 +151,25 @@ h2 {
 }
 
 .swiper-button-next, .swiper-button-prev {
+    color: #fff;
+}
+
+/* Cert grid */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.cert-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    min-height: 150px; /* Uniform */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: #fff;
 }
 
@@ -168,6 +195,9 @@ footer {
         font-size: 2rem;
     }
     .swiper-slide {
-        font-size: 0.9rem;
+        min-height: 250px;
+    }
+    .cert-grid {
+        grid-template-columns: 1fr;
     }
 }
