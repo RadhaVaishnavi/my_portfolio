@@ -106,17 +106,18 @@ h2 {
 }
 
 .skills-flex span {
-    flex: 1 1 150px;
+    flex: 0 1 200px; /* Fixed basis for uniformity */
     background: rgba(0, 123, 255, 0.2);
     padding: 0.5rem;
     border-radius: 5px;
     text-align: center;
     transition: transform 0.3s;
     color: #fff;
-    min-height: 40px; /* Uniform height */
+    min-height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    word-break: break-word;
 }
 
 .skills-flex span:hover {
@@ -135,15 +136,11 @@ h2 {
     border-radius: 5px;
     text-align: center;
     color: #fff;
-    min-height: 300px; /* Uniform height */
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
-}
-
-.project-slide, .internship-slide {
-    /* No cert-slide anymore */
 }
 
 .swiper-pagination-bullet {
@@ -166,7 +163,7 @@ h2 {
     padding: 1rem;
     border-radius: 5px;
     text-align: center;
-    min-height: 150px; /* Uniform */
+    min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -199,5 +196,8 @@ footer {
     }
     .cert-grid {
         grid-template-columns: 1fr;
+    }
+    .skills-flex span {
+        flex: 0 1 150px;
     }
 }
